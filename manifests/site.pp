@@ -53,35 +53,43 @@ Homebrew::Formula <| |> -> Package <| |>
 
 node default {
   # core modules, needed for most things
-  include dnsmasq
+  #include dnsmasq
+  #include hub
+  #include nginx
+
   include git
-  include hub
-  include nginx
+  include chrome
+  
+  #OS X custom preferences
 
-  # fail if FDE is not enabled
-  if $::root_encrypted == 'no' {
-    fail('Please enable full disk encryption and try again')
+  include osx::global::enable_keyboard_control_access
+  include osx::global::expand_save_dialog
+  include osx::global::disable_autocorrect
+  include osx::dock::autohide
+  include osx::dock::clear_dock
+  include osx::software_update
+
+  class { 'osx::global::key_repeat_delay':
+    delay => 2
   }
 
-  # node versions
-  include nodejs::v0_6
-  include nodejs::v0_8
-  include nodejs::v0_10
-
-  # default ruby versions
-  include ruby::1_8_7
-  include ruby::1_9_2
-  include ruby::1_9_3
-  include ruby::2_0_0
-
-  # common, useful packages
-  package {
-    [
-      'ack',
-      'findutils',
-      'gnu-tar'
-    ]:
+  class { 'osx::global::key_repeat_rate':
+    rate => 5
   }
+
+  class { 'osx::dock::position':
+    position => 'left'
+  }
+
+  class { 'osx::global::natural_mouse_scrolling':
+    enabled => true
+  }
+
+  #Ruby
+  class { 'ruby::global':
+    version => '2.0.0-p353'
+  }
+
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,

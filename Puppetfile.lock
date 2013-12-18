@@ -1,17 +1,17 @@
 GITHUBTARBALL
+  remote: boxen/puppet-autoconf
+  specs:
+    autoconf (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
     boxen (3.3.4)
 
 GITHUBTARBALL
-  remote: boxen/puppet-dnsmasq
+  remote: boxen/puppet-chrome
   specs:
-    dnsmasq (1.0.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-foreman
-  specs:
-    foreman (1.0.0)
+    chrome (1.1.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-gcc
@@ -24,29 +24,9 @@ GITHUBTARBALL
     git (1.2.5)
 
 GITHUBTARBALL
-  remote: boxen/puppet-go
-  specs:
-    go (1.0.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
     homebrew (1.5.1)
-
-GITHUBTARBALL
-  remote: boxen/puppet-hub
-  specs:
-    hub (1.0.3)
-
-GITHUBTARBALL
-  remote: boxen/puppet-nginx
-  specs:
-    nginx (1.4.2)
-
-GITHUBTARBALL
-  remote: boxen/puppet-nodejs
-  specs:
-    nodejs (3.3.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-openssl
@@ -54,14 +34,9 @@ GITHUBTARBALL
     openssl (1.0.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-phantomjs
+  remote: boxen/puppet-osx
   specs:
-    phantomjs (2.0.2)
-
-GITHUBTARBALL
-  remote: boxen/puppet-pkgconfig
-  specs:
-    pkgconfig (1.0.0)
+    osx (2.2.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-repository
@@ -71,7 +46,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
-    ruby (6.7.2)
+    ruby (6.8.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-sudo
@@ -81,7 +56,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-xquartz
   specs:
-    xquartz (1.1.0)
+    xquartz (1.1.1)
 
 GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
@@ -94,23 +69,18 @@ GITHUBTARBALL
     stdlib (4.1.0)
 
 DEPENDENCIES
+  autoconf (>= 0)
   boxen (= 3.3.4)
-  dnsmasq (= 1.0.0)
-  foreman (= 1.0.0)
+  chrome (>= 0)
   gcc (= 2.0.1)
   git (= 1.2.5)
-  go (= 1.0.0)
   homebrew (= 1.5.1)
-  hub (= 1.0.3)
   inifile (= 1.0.0)
-  nginx (= 1.4.2)
-  nodejs (= 3.3.0)
-  openssl (= 1.0.0)
-  phantomjs (= 2.0.2)
-  pkgconfig (= 1.0.0)
+  openssl (>= 0)
+  osx (>= 0)
   repository (= 2.2.0)
-  ruby (= 6.7.2)
+  ruby (>= 0)
   stdlib (= 4.1.0)
   sudo (= 1.0.0)
-  xquartz (= 1.1.0)
+  xquartz (>= 0)
 
